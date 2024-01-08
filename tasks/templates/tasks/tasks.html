@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Tasks</h1>
+    <ul>
+        {% for task in tasks %}
+        <li class="task">
+            <h1>Task: {{task.title}}</h1>
+            <h3>Description: {{task.description}}</h3>
+            <h3>By: {{task.user.username}}</h3>
+        </li>
+        {% endfor %}
+    </ul>
+
+{% endblock content %}
