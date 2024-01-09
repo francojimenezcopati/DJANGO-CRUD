@@ -10,9 +10,10 @@
         <nav>
             <ul>
                 <li><a href="{% url 'home' %}">Home</a></li>
-                <li><a href="{% url 'tasks' %}">Tasks</a></li>
-                <li><a href="{% url 'create_task' %}">Create a new task</a></li>
                 {% if user.is_authenticated %}
+                <li><a href="{% url 'tasks' %}">Tasks</a></li>
+                <li><a href="{% url 'completed_tasks' %}">Completed tasks</a></li>
+                <li><a href="{% url 'create_task' %}">Create a new task</a></li>
                 <li><a href="{% url 'signout' %}">Logout</a></li>
                 {% else %}
                 <li><a href="{% url 'signup' %}">Sign up</a></li>
